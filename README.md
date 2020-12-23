@@ -1,7 +1,15 @@
 # Barnes-Hut
 
-Simulacija n-teles z uporabo Barnes-Hutovega algoritma
+Simulacija _n_-teles z uporabo Barnes-Hut algoritma
 
 Projekt pri predmetu Računalništvo v drugem letniku fizike na FMF, UL.
+
+
+
+___
+## Literatura
+* [A simple and pythonic Barnes-Hut treecode](https://mikegrudic.wordpress.com/2017/07/11/a-simple-and-pythonic-barnes-hut-treecode/)
+* [The Barnes-Hut algorithm](http://arborjs.org/docs/barnes-hut)
+* 
 
 
