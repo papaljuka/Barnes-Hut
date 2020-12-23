@@ -1,2 +1,2 @@
 # Barnes-Hut
-Simulacija n-teles z uporabo Barnes-Hutovega algoritma
+$n$- body simulation using the Barnes-Hut algorithm
