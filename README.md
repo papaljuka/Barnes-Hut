@@ -2,13 +2,11 @@
 
 _n_-body simulation using the Barnes-Hut algorithm.
 
-School project for the course of Computer Science at 
+School project for the course of Computer Science at
 the Department of Physics, FMF UL.
 
-
-
 ___
-## Literatura
+## Literature
 
 * [A simple and pythonic Barnes-Hut treecode](https://mikegrudic.wordpress.com/2017/07/11/a-simple-and-pythonic-barnes-hut-treecode/)
 * [The Barnes-Hut algorithm](http://arborjs.org/docs/barnes-hut)
