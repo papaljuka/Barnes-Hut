@@ -11,17 +11,14 @@ class COM:
     def together(self, other):
         if not other:
             return self
-            
+
         m = self.m + other.m
         x = (self.pos.x * self.m + other.pos.x + other.m) / m
         y = (self.pos.y * self.m + other.pos.y + other.m) / m
-        z = (self.pos.z * self.m + other.pos.z + other.m) / m
 
-        position = Dist(x, y, z)
+        position = Dist(x, y)
 
         return COM(m, position)
 
     def __repr__(self):
         return "COM: {0}.m, {0}.pos".format(self)
-
-
