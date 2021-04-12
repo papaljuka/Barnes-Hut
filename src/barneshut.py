@@ -52,10 +52,11 @@ class Simulation:
                 if event.type == pygame.MOUSEBUTTONDOWN:
                     #forward roll
                     if event.button == 4:
-                        pass
+                        glTranslatef(0.0, 0.0, 1)
                     #backwards roll
                     if event.button == 5:
-                        pass
+                        glTranslatef(0.0, 0.0, -1)
+
 
         pygame.display.flip()
 
@@ -71,6 +72,7 @@ class Simulation:
                 position = (constants.x[i], constants.y[i])
                 velocity = (constants.vx[i], constants.vy[i])
                 # size?
+                
                 #
                 system.append(Body(mass, position, velocity, size))
         else:

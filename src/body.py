@@ -1,4 +1,5 @@
 import numpy as np
+import abc
 from constants import *
 from vector import Vector
 from dist import Dist
@@ -47,18 +48,23 @@ class Body():
         dx = x.T - x
         dy = y.T - y
         r_inv = np.sqrt(dx**2 + dy**2)
-        r_inv[r_inv > 0] = 1.0 / r_inv[r_inv > 0]
-        EPot = constants.G * np.sum(np.sum(np.triu(-(m*m.T)*r_inv,1))
-        return (EKin, EPot)
 
-#   assuming that when two bodies collide they merge, we can look at the CMS velocity
-    def collision(self, other):
-        self.vx = (self.m * vx + other.m * other.vx) / (self.m + other.m)
         self.vy = (self.m * vy + other.m * other.vy) / (self.m + other.m)
         self.m += other.m
 
-    def pydraw(self, pd, plane):
-        pass
+    def pydraw(self, pd, surface):
+        vmag = self.v.mag()
+        #color = 
+        
+        x = math.floor(self.pos.x)
+        y = math.flor(self.pos.y)
+        pd.circle(surface, color, (x, y), 1 + math.floor(0.2 * self.m/#particle mass))
 
     def __repr__(self):
         return "Body: ({0}.x, {0}.y), mass= {0}.m".format(self)
+
+
+class Drawable(object, metaclass=abc.ABCMeta):
+    @abctractmethod
+    def pydraw(self, pd, surface):
+        raise NotImplementedError('Must implement Pydraw function!')
